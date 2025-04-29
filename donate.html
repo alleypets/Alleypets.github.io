@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Alley Cats Allies Animal Shelter</title>
+    <link rel="stylesheet" type="text/css" href="donate.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+        /* Additional styles for donation platform selection page */
+        .platform-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .donation-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .donation-option {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .donation-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .donation-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        
+        .platform-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        
+        .platform-option {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .platform-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .platform-logo {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .platform-logo img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+        
+        .custom-donation {
+            max-width: 500px;
+            margin: 3rem auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .custom-donation .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .custom-donation input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .impact-section {
+            background-color: #f9f9f9;
+            padding: 4rem 0;
+            margin-top: 3rem;
+        }
+        
+        .impact-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .impact-card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .impact-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        #donationAmount {
+            font-size: 1.2rem;
+            padding: 0.8rem;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Alley Cats Allies</h1>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="adoptform.html">Adopt</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="donate.html" class="active">Donate</a></li>
+                    <!--li><a href="#contact">Contact</a></li-->
+                </ul>
+            </nav>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="adoptform.html">Adopt</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <!--li><a href="#contact">Contact</a></li-->
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Overlay Backdrop -->
+    <div class="overlay-backdrop"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2>Make a Donation</h2>
+            <p>Your contribution helps us provide care, shelter, and love to animals in need.</p>
+        </div>
+    </section>
+
+    <!-- Donation Information Section -->
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <div class="donate-text">
+                    <h2>How Your Donation Helps</h2>
+                    <p>Every dollar you donate makes a difference in the lives of animals in our care. Your generosity helps us:</p>
+                    <ul>
+                        <li>Provide food, shelter, and medical care for abandoned animals</li>
+                        <li>Fund rescue operations and emergency veterinary services</li>
+                        <li>Support our adoption program to find forever homes</li>
+                        <li>Maintain our facilities and provide quality care</li>
+                        <li>Conduct community education and outreach programs</li>
+                    </ul>
+                    <p>Alley Cats Allies is a 501(c)(3) nonprofit organization, and all donations are tax-deductible to the extent allowed by law.</p>
+                </div>
+                <div class="impact-image">
+                    <img src="imgs/dp.jpg" alt="Animals being cared for" onerror="this.src='/api/placeholder/500/300'; this.alt='Animals being cared for';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options Section -->
+    <section>
+        <div class="container platform-container">
+            <div class="section-heading">
+                <h2>Support Our Cause</h2>
+                <p>Choose a donation option that works best for you</p>
+            </div>
+            
+            <div class="donation-options">
+                <div class="donation-option">
+                    <h3>One-time Donation</h3>
+                    <div class="donation-amount">$25</div>
+                    <p>Provides food and basic supplies for one animal for a month</p>
+                    <button class="btn" onclick="setAmount(25)">Select $25</button>
+                </div>
+                <div class="donation-option">
+                    <h3>One-time Donation</h3>
+                    <div class="donation-amount">$50</div>
+                    <p>Covers vaccination and basic medical care for one animal</p>
+                    <button class="btn" onclick="setAmount(50)">Select $50</button>
+                </div>
+                <div class="donation-option">
+                    <h3>One-time Donation</h3>
+                    <div class="donation-amount">$100</div>
+                    <p>Helps with emergency veterinary services for animals in critical condition</p>
+                    <button class="btn" onclick="setAmount(100)">Select $100</button>
+                </div>
+            </div>
+            
+            <div class="custom-donation">
+                <h3>Enter Custom Amount</h3>
+                <div class="form-group">
+                    <input type="number" id="donationAmount" placeholder="Enter donation amount" min="1" step="1">
+                </div>
+            </div>
+            
+            <div class="section-heading">
+                <h3>Choose Your Payment Platform</h3>
+                <p>Click on any logo to proceed with your donation</p>
+            </div>
+
+            <div class="platform-options">
+                <a href="#" class="platform-option" id="paypalLink" onclick="redirectToDonation('paypal')">
+                    <div class="platform-logo">
+                        <img src="imgs/paypal.png" alt="PayPal" onerror="this.src='/api/placeholder/200/80'; this.alt='PayPal Logo';">
+                    </div>
+                    <h4>PayPal</h4>
+                    <p>Fast, secure payments with PayPal protection</p>
+                </a>
+
+                <div class="platform-options">
+                <a href="#" class="platform-option" id="gofundmeLink" onclick="redirectToDonation('gofundme')">
+                    <div class="platform-logo">
+                        <img src="imgs/go fund.jpg" alt="GoFundMe" onerror="this.src='/api/placeholder/200/80'; this.alt='GoFundMe Logo';">
+                    </div>
+                    <h4>GoFundMe</h4>
+                    <p>Support our fundraising campaign directly</p>
+                </a>
+                
+                <!--a href="#" class="platform-option" id="stripeLink" onclick="redirectToDonation('stripe')">
+                    <div class="platform-logo">
+                        <img src="imgs/stripe-logo.png" alt="Stripe" onerror="this.src='/api/placeholder/200/80'; this.alt='Stripe Logo';">
+                    </div>
+                    <h4>Credit/Debit Card</h4>
+                    <p>Secure payment via Stripe payment gateway</p>
+                </a-->
+                
+                <!--a href="#" class="platform-option" id="venmoLink" onclick="redirectToDonation('venmo')">
+                    <div class="platform-logo">
+                        <img src="imgs/venmo-logo.png" alt="Venmo" onerror="this.src='/api/placeholder/200/80'; this.alt='Venmo Logo';">
+                    </div>
+                    <h4>Venmo</h4>
+                    <p>Quick and easy mobile payments</p>
+                </a-->
+            </div>
+            
+            
+                
+                <!--a href="#" class="platform-option" id="cryptocurrencyLink" onclick="redirectToDonation('crypto')">
+                    <div class="platform-logo">
+                        <img src="imgs/crypto-logo.png" alt="Cryptocurrency" onerror="this.src='/api/placeholder/200/80'; this.alt='Cryptocurrency Logo';">
+                    </div>
+                    <h4>Cryptocurrency</h4>
+                    <p>Donate using Bitcoin, Ethereum, or other cryptocurrencies</p>
+                </a-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Your Donation's Impact</h2>
+                <p>See how your contribution makes a difference in the lives of animals</p>
+            </div>
+            
+            <div class="impact-cards">
+                <div class="impact-card">
+                    <div class="impact-icon">🍲</div>
+                    <h3>Food & Shelter</h3>
+                    <p>Your donation helps provide nutritious meals, warm beds, and safe shelter for animals waiting for their forever homes.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">🏥</div>
+                    <h3>Medical Care</h3>
+                    <p>Donations fund vaccinations, spay/neuter procedures, and emergency veterinary treatments for animals in need.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">❤️</div>
+                    <h3>Rescue Operations</h3>
+                    <p>Help us rescue animals from dangerous situations and provide rehabilitation for those who have suffered abuse or neglect.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">🎓</div>
+                    <h3>Community Education</h3>
+                    <p>Support our efforts to educate the community about responsible pet ownership and animal welfare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>Alley Cats Allies</h3>
+                <p>123 Rescue Lane<br>Anytown, ST 12345<br>Phone: (555) 123-4567<br>Email: info@alleycatsallies.org</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><img style="width: 35px;" src="imgs/WhatsApp.png"></a>
+                    <a href="#" aria-label="Twitter"><img style="width: 35px;" src="imgs/X.png"></a>
+                    <a href="#" aria-label="Instagram"><img style="width: 35px;" src="imgs/Tiktok.png"></a>
+                    <a href="#" aria-label="YouTube"><img style="width: 31px;" src="imgs/Instagram.png"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="donateform.html">Adopt</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <ul>
+                    <li>Monday: 10am - 6pm</li>
+                    <li>Tuesday: 10am - 6pm</li>
+                    <li>Wednesday: 10am - 6pm</li>
+                    <li>Thursday: 10am - 6pm</li>
+                    <li>Friday: 10am - 6pm</li>
+                    <li>Saturday: 9am - 5pm</li>
+                    <li>Sunday: 11am - 4pm</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter to stay updated on our latest rescues and events.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Alley Cats Allies Animal Shelter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.querySelector('.mobile-nav-overlay');
+            const backdrop = document.querySelector('.overlay-backdrop');
+            
+            // Toggle mobile menu
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('open');
+                mobileNav.classList.toggle('open');
+                
+                if (mobileNav.classList.contains('open')) {
+                    backdrop.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                } else {
+                    backdrop.style.display = 'none';
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+            
+            // Close mobile menu when clicking outside
+            backdrop.addEventListener('click', function() {
+                hamburger.classList.remove('open');
+                mobileNav.classList.remove('open');
+                this.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+            
+            // Close mobile menu when clicking on a nav link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('open');
+                    mobileNav.classList.remove('open');
+                    backdrop.style.display = 'none';
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+            });
+            
+            // Check URL parameters for pre-filled amount
+            const urlParams = new URLSearchParams(window.location.search);
+            const amountParam = urlParams.get('amount');
+            if (amountParam && !isNaN(amountParam)) {
+                document.getElementById('donationAmount').value = amountParam;
+            }
+        });
+        
+        // Set donation amount from buttons
+        function setAmount(amount) {
+            document.getElementById('donationAmount').value = amount;
+            document.getElementById('donationAmount').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Redirect to the actual donation platform links
+        function redirectToDonation(platform) {
+            // Get the donation amount
+            const amount = document.getElementById('donationAmount').value || '25'; // Default to $25 if no amount specified
+            
+            // Actual donation platform links
+            const links = {
+                'paypal': 'https://www.paypal.com/donate?hosted_button_id=HX6B2YME87KZL',
+                'gofundme': 'https://gofund.me/9febaa60'
+            };
+            
+            // For PayPal, we can add the amount parameter if their button supports it
+            if (platform === 'paypal') {
+                // Some PayPal donation buttons support adding amount parameter
+                // If yours doesn't, it will just ignore it
+                window.location.href = `${links[platform]}&amount=${amount}`;
+            } else {
+                // For GoFundMe, just redirect to the campaign page
+                window.location.href = links[platform];
+            }
+            
+            // Prevent default link behavior
+            return false;
+        }
+    </script>
+</body>
+</html>

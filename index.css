@@ -430,6 +430,101 @@
         .payment-method:hover {
             border-color: var(--primary);
         }
+        /* Payment Platform Styling */
+.payment-platforms {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    text-align: center;
+}
+
+.payment-platforms h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.platform-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.platform-option {
+    flex: 1;
+    max-width: 300px;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: var(--dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.platform-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.platform-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.platform-logo img {
+    max-height: 60px;
+    max-width: 100%;
+}
+
+.platform-option h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.platform-option p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.custom-donation {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.custom-donation h3 {
+    margin-bottom: 1.5rem;
+}
+
+.custom-donation .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.custom-donation input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .platform-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .platform-option {
+        width: 100%;
+    }
+}
         
         footer {
             background-color: var(--dark);

@@ -18,11 +18,11 @@
                 <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#gallery">Adopt</a></li>
+                <li><a href="adoptform.html">Adopt</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <!--li><a href="volunteer.html">Volunteer</a></li-->
                 <li><a href="donate.html">Donate</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <!--li><a href="#contact">Contact</a></li-->
                 </ul>
             </nav>
             
@@ -42,11 +42,11 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#gallery">Adopt</a></li>
+                <li><a href="adoptform.html">Adopt</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <!--li><a href="volunteer.html">Volunteer</a></li-->
                 <li><a href="donate.html">Donate</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <!--li><a href="#contact">Contact</a></li-->
             </ul>
         </nav>
     </div>
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="section-heading">
                 <h2>About Us</h2>
-                <p>Dedicated to the welfare of animals since 2010</p>
+                <p>Dedicated to the welfare of animals since 2012</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -185,53 +185,63 @@
             </div>
         </div>
     </section>
-
-    <section id="donate">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Support Our Cause</h2>
-                <p>Your donations help us continue our mission of rescuing and rehoming animals in need</p>
+<section id="donate">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Support Our Cause</h2>
+            <p>Your donations help us continue our mission of rescuing and rehoming animals in need</p>
+        </div>
+        <div class="donation-options">
+            <div class="donation-option">
+                <h3>One-time Donation</h3>
+                <div class="donation-amount">$25</div>
+                <p>Provides food and basic supplies for one animal for a month</p>
+                <a href="donate.html?amount=25" class="btn">Donate $25</a>
             </div>
-            <div class="donation-options">
-                <div class="donation-option">
-                    <h3>One-time Donation</h3>
-                    <div class="donation-amount">$25</div>
-                    <p>Provides food and basic supplies for one animal for a month</p>
-                    <a href="donate.html" class="btn">Donate $25</a>
-                </div>
-                <div class="donation-option">
-                    <h3>One-time Donation</h3>
-                    <div class="donation-amount">$50</div>
-                    <p>Covers vaccination and basic medical care for one animal</p>
-                    <a href="donate.html" class="btn">Donate $50</a>
-                </div>
-                <div class="donation-option">
-                    <h3>One-time Donation</h3>
-                    <div class="donation-amount">$100</div>
-                    <p>Helps with emergency veterinary services for animals in critical condition</p>
-                    <a href="donate.html" class="btn">Donate $100</a>
-                </div>
+            <div class="donation-option">
+                <h3>One-time Donation</h3>
+                <div class="donation-amount">$50</div>
+                <p>Covers vaccination and basic medical care for one animal</p>
+                <a href="donate.html?amount=50" class="btn">Donate $50</a>
             </div>
-            <!--div class="donation-form"-->
-                <!--h3>Make a Custom Donation</h3-->
+            <div class="donation-option">
+                <h3>One-time Donation</h3>
+                <div class="donation-amount">$100</div>
+                <p>Helps with emergency veterinary services for animals in critical condition</p>
+                <a href="donate.html?amount=100" class="btn">Donate $100</a>
+            </div>
+        </div>
+        
+        <div class="payment-platforms">
+            <h3>Choose Your Payment Method</h3>
+            <div class="platform-options">
+                <a href="donate.html?platform=paypal" class="platform-option">
+                    <div class="platform-logo paypal-logo">
+                        <img src="imgs/paypal.png" alt="PayPal" onerror="this.src='/api/placeholder/120/60'; this.alt='PayPal Logo';">
+                    </div>
+                    <h4>PayPal</h4>
+                    <p>Fast, secure payments with PayPal protection</p>
+                </a>
+                <a href="donate.html?platform=gofundme" class="platform-option">
+                    <div class="platform-logo gofundme-logo">
+                        <img src="imgs/go fund.jpg" alt="GoFundMe" onerror="this.src='/api/placeholder/120/60'; this.alt='GoFundMe Logo';">
+                    </div>
+                    <h4>GoFundMe</h4>
+                    <p>Support our fundraising campaign directly</p>
+                </a>
+            </div>
+            <div class="custom-donation">
+                <h3>Make a Custom Donation</h3>
                 <form action="donate.html" method="GET">
-                    <!--div class="form-group">
-                        <label for="amount">Donation Amount</label>
-                        <input type="number" id="amount" name="amount" placeholder="Enter amount" min="1" required-->
+                    <div class="form-group">
+                        <input type="number" id="amount" name="amount" placeholder="Enter custom amount" min="1" required>
                     </div>
-                    <!--div class="payment-methods">
-                        <div class="payment-method active" data-method="creditcard">
-                            <h4>Credit Card</h4-->
-                        </div>
-                        <div class="payment-method" data-method="paypal">
-                            <h4>PayPal</h4>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-accent" style="width: 100%;">Proceed to Payment</button>
+                    <button type="submit" class="btn btn-accent">Proceed to Payment</button>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div class="container footer-container">
@@ -250,7 +260,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="pets.html">Adopt</a></li>
+                    <li><a href="donateform.html">Adopt</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="volunteer.html">Volunteer</a></li>
                     <li><a href="donate.html">Donate</a></li>
